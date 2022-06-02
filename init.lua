@@ -33,7 +33,7 @@ local config = {
       bufferline = true,
       dashboard = true,
       highlighturl = true,
-      hop = false,
+      hop = true,
       indent_blankline = true,
       lightspeed = false,
       ["neo-tree"] = true,
@@ -70,6 +70,7 @@ local config = {
       --     require("lsp_signature").setup()
       --   end,
       -- },
+      {"phaazon/hop.nvim"}
     },
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
