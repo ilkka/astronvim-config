@@ -102,8 +102,10 @@ local config = {
       config.sources = {
         -- Set a formatter
         null_ls.builtins.formatting.rufo,
+        null_ls.builtins.formatting.prettierd,
         -- Set a linter
         null_ls.builtins.diagnostics.rubocop,
+        null_ls.builtins.diagnostics.eslint,
       }
       -- set up null-ls's on_attach function
       config.on_attach = function(client)
@@ -198,6 +200,16 @@ local config = {
       --     },
       --   },
       -- },
+      svelte = {
+        on_attach = function(client, bufnr)
+          client.resolved_capabilities.document_formatting = false
+        end
+      },
+      tsserver = {
+        on_attach = function(client, bufnr)
+          client.resolved_capabilities.document_formatting = false
+        end
+      },
     },
   },
 
