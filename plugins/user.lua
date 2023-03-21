@@ -20,4 +20,8 @@ return {
     'https://tpope.io/vim/fugitive.git',
     lazy = false
   },
+  {
+    "machakann/vim-sandwich",
+    event = "BufRead"
+  },
 }
